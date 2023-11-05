@@ -1,0 +1,23 @@
+<%- include("./partials/header") -%>
+<h1>Home</h1>
+<p>
+    <%= StartingContent %> 
+</p>
+
+
+<% UserPosts.forEach(function(e){       %>
+<h1><%= e.title %></h1>
+<p><%= truncate(e.content,80) %></p>
+<a href="/posts/<%=e.title%>">Read More</a>
+<%  }) %>
+
+
+<%  function truncate(source, size) {   %>  
+<%  return source.length > size ? source.slice(0, size - 1) + "…" : source; %>      
+<% }   %>
+    
+
+
+
+
+<%-include("./partials/footer") -%>

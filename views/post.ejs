@@ -1,0 +1,10 @@
+<%- include("partials/header"); -%>
+
+  <h1><%=title%></h1>
+  <p><%= truncate(content,100)%></p>
+
+<%- include("partials/footer"); -%>
+
+<%  function truncate(source, size) {   %>  
+<%  return source.length > size ? source.slice(0, size - 1) + "…" : source; %>      
+ <% }   %>
